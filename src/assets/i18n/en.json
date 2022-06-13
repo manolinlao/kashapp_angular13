@@ -1,0 +1,88 @@
+{
+  "common":{
+    "wait": "Please, wait...",
+    "bills": "Bills",
+    "clear": "Clear",
+    "continue": "Continue",
+    "back": "Go Back",
+    "loading": "loading",
+    "logout": "logout",
+    "import": "Amount",
+    "currency": "Currency",
+    "value": "Value",
+    "cashbox": "Cashbox",
+    "number": "Number",
+    "atmNotAvailable":"This ATM is not available"
+  },
+  "login":{
+    "title": "User Login",
+    "username": "Username",
+    "password": "Password",
+    "clear": "Clear",
+    "login": "LOGIN",
+    "validating":"Validating user",
+    "userNotValid":"User not valid"
+  },
+  "entrance":{
+    "loading":"Loading ATM Map",
+    "available":"Available ATMs",
+    "user":"User",
+    "atm":"Atm",
+    "mode":"Mode",
+    "users":"Users",
+    "client":"Client",
+    "operator":"Operator",
+    "observer":"Observer",
+    "notAvailable":"Not available",
+    "takeCash":"Take cash",
+    "maintenance":"Maintenance",
+    "status":"Status"
+  },
+  "loadDenoms":{
+    "loadingBillsDenomination":"Loading Bills Denominations"
+  },
+  "cashStep":{
+    "amount":"Amount",
+    "prepare":"Prepare",
+    "card":"Card",
+    "cash":"Cash"
+  },
+  "selectImport":{
+      "title":"Enter the amount",
+      "selectAmount": "Select an amount",
+      "multiple5":"Amount must be multiple of 5"
+  },
+  "optionsBills":{
+    "computing": "Computing the possibilities",
+    "title": "Choose the option you prefer",
+    "subTitle": "Total amount to withdraw",
+    "noSelect": "Let the CashUnit decide for me",
+    "option": "Option"
+  },
+  "prepare":{
+    "billsOf": "bills of",
+    "title": "Dispense preparation",
+    "amountToDispense": "Amount to withdraw",
+    "preparing": "Preparing dispense"
+  },
+  "card":{
+    "title": "Take your card",
+    "subTitle": "Please, take your card before getting the money"
+  },
+  "cash":{
+    "title": "Take your cash",
+    "subTitle1": "This is the final step",
+    "subTitle2": "Now you can take your cash, enjoy it!",
+    "cashComing": "Cash is coming"
+  },
+  "final":{
+    "morecash": "Take more cash",
+    "moneyNotPresent": "Money has been captured for exceeding the collection time",
+    "error": "Error",
+    "ok": "Withdrawal successful",
+    "resumen": "Summary of bills obtained",
+    "cashTaken": "Cash withdrawed",
+    "errorDispense":"Dispense Error",
+    "title":"Operation completed"
+  }
+}

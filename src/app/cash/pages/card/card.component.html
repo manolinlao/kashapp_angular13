@@ -1,0 +1,32 @@
+<app-nav-bar [showHeaderData]="true" [showHome]="false" [showLogout]="false"></app-nav-bar>
+<app-steps [indexStep]="2" class="mt-2 mb-2"></app-steps>
+
+<ion-content>
+  <div class="cash-title">
+    {{'card.title' | translate}}
+  </div>
+  <div style="display:flex;justify-content:center;background-color:var(--common-bg-color); width:100vw;padding:6px;font-weight: bold;font-size: small;">
+    <div style="color:grey">
+      {{'card.subTitle' | translate}}
+    </div>    
+  </div>
+
+  
+  <div style="display:flex;justify-content:center;margin-top:20px">
+    <div style="display:flex;justify-content:center;border:1px solid;border-color:var(--common-border-color);border-radius: 8px;width:275px">
+      <div style="display:flex;flex-direction: column;">
+        <div style="height:20px"></div>
+        <div style="display:flex;justify-content:center;">
+          <img src="assets/img/card_out_v2.svg"> 
+        </div>
+        <div style="height:20px"></div>        
+      </div>
+    </div>
+  </div>
+  
+</ion-content>
+
+<app-language></app-language>
+
+<app-footer></app-footer>
+

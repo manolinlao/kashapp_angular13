@@ -1,0 +1,88 @@
+{
+  "common":{
+    "wait": "Por favor, espera...",
+    "bills": "Billetes",
+    "clear": "Borrar",
+    "continue": "Continuar",
+    "back": "Atrás",
+    "logout": "logout",
+    "import": "Importe",
+    "currency": "Moneda",
+    "value": "Valor",
+    "cashbox": "Cajetín",
+    "number": "Número",
+    "atmNotAvailable":"Este cajero no está disponible"
+  },
+  "login":{
+    "title": "Login de usuario",
+    "username": "Usuario",
+    "password": "Password",
+    "clear": "Borrar",
+    "login": "LOGIN",
+    "validating": "Validando usuario",
+    "userNotValid":"Usuario no es válido"
+  },
+  "entrance":{
+    "loading":"Cargando mapa de cajeros",
+    "available":"Cajeros disponibles",
+    "user":"Usuario",
+    "atm":"Atm",
+    "mode":"Modo",
+    "users":"Usuarios",
+    "client":"Cliente",
+    "operator":"Operador",
+    "observer":"Observador",
+    "notAvailable":"No disponible",
+    "takeCash":"Sacar dinero",
+    "maintenance":"Maintenance",
+    "status":"Status"
+  },
+  "loadDenoms":{
+    "loadingBillsDenomination":"Cargando denominaciones"
+  },
+  "cashStep":{
+    "amount":"Cantidad",
+    "prepare":"Preparación",
+    "card":"Tarjeta",
+    "cash":"Dinero"
+  },
+  "selectImport":{
+      "title":"Introduce una cantidad",
+      "selectAmount": "Selecciona una cantidad",
+      "multiple5":"La cantidad ha de ser múltiple de 5"
+  },
+  "optionsBills":{
+    "computing": "Calculando las posibilidades",
+    "title": "Elige la opción que prefieras",
+    "subTitle": "Cantidad total a retirar",
+    "noSelect": "Deja a la CashUnit que decida por mi",
+    "option": "Opción"
+  },
+  "prepare":{
+    "billsOf": "billetes de",
+    "title": "Preparando la dispensación",
+    "amountToDispense": "Cantidad a retirar",
+    "preparing": "Preparando"
+  },
+  "card":{
+    "title": "Coge tu tarjeta",
+    "subTitle": "Por favor, coge tu tarjeta antes de conseguir el dinero"
+  },
+  "cash":{
+    "title": "Coge tu dinero",
+    "subTitle1": "Este es el paso final",
+    "subTitle2": "Ahora puedes coger tu dinero, ¡disfrútalo!",
+    "cashComing": "El dinero está viniendo"
+  },
+  "final":{
+    "morecash": "Saca más dinero",
+    "moneyNotPresent": "El dinero se ha capturado por exceder el tiempo de recogida",
+    "error": "Error",
+    "ok": "Reintegro realizado con éxito",
+    "resumen": "Resumen de los billetes obtenidos",
+    "cashTaken": "Has sacado",
+    "errorDispense":"Error en la dispensación",
+    "title":"Operativa finalizada"
+    
+  }
+}

@@ -1,0 +1,45 @@
+<app-nav-bar [showHeaderData]="true" [showHome]="true"></app-nav-bar>
+<app-steps [indexStep]="0" class="mt-2 mb-2"></app-steps>
+
+<ion-content>
+  <div *ngIf="!loading">
+    <div class="cash-title">
+      {{'optionsBills.title' | translate}}
+    </div>
+    <div style="display:flex;justify-content:center;background-color:var(--common-bg-color); width:100vw;padding:6px;font-weight: bold;font-size: small;">
+      <div style="color:grey">
+        {{'optionsBills.subTitle' | translate}}
+      </div>
+      <div style="margin-left:10px;color:var(--common-text-primary-color) ">
+        {{amount}} €
+      </div>
+    </div>
+
+    <div style="height:10px"></div>
+
+    <div *ngFor="let item of billsDistribution;let i=index" style="display:flex;justify-content:center;margin-top:10px">
+      <app-select-option [billsDistribution]="item" [id]="i" (onOptionClick)="optionClick($event)"></app-select-option>            
+    </div>
+
+
+    <div style="display:flex;justify-content: center;margin-top:10px">
+      <div class="option" (click)="noSelect()">
+        <div style="background-color: var(--common-bg-color);padding-left:10px;padding-top:4px;padding-bottom:4px;color:var(--common-text-primary-color);font-weight: bold;">        
+        {{'optionsBills.option' | translate}} {{numberOptionNoSelect}}
+        </div>          
+        <div style="display:flex;justify-content:center;padding-top:8px">          
+          {{'optionsBills.noSelect' | translate}}        
+        </div>          
+      </div>
+    </div>
+
+   <ion-button (click)="goBack()" expand="full" fill="clear" shape="round" color="secondary">
+     <ion-icon slot="start" name="arrow-back-circle-outline"></ion-icon>{{'common.back' | translate}}
+   </ion-button>
+
+  </div>
+</ion-content>
+
+<app-language></app-language>
+
+<app-footer></app-footer>

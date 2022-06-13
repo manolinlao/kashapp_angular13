@@ -1,0 +1,37 @@
+.buttonCash{
+  width: 70px;
+  height: 35px;
+  border: 1px solid;
+  border-color: var(--bill-buttoncash-border);
+  cursor: pointer;
+  color: var(--common-text-primary-color);
+  font-size: large;
+    
+}
+
+.buttonCash:hover{
+  color: var(--common-text-primary-color);
+  border: 2px solid;
+  border-color: var(--common-text-primary-color);
+  background-color: var(--bill-buttoncash-hovered);
+  color: var(--bill-buttoncash-border);
+}
+
+
+.buttonBill{
+  width:90px;
+  height:45px;
+  border: 1px solid;
+  border-color:var(--bill-buttonbill-border);  
+  border-radius: 8px;
+  margin:5px;
+  cursor:pointer
+}
+
+.buttonBill:hover{
+ background-color:var(--bill-buttonbill-border);
+}
+
+.buttonColorBand{
+  background-color: var(--bill-buttoncolorband);
+}

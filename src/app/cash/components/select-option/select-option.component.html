@@ -1,0 +1,26 @@
+
+<div *ngIf="allOk">
+  <div class="main" (click)="optionClick()">
+    <div style="background-color: #d3faff; padding-left:10px; padding-top:4px;padding-bottom:4px;color:#2378b7;font-weight: bold;">
+      {{'optionsBills.option' | translate}} {{id+1}}
+    </div>
+  
+    <div style="display:flex;justify-content:center">
+  
+      <div *ngFor="let item of billsDistribution.bills" style="margin-left: 4px;margin-right:4px;margin-top:10px;margin-bottom: 10px;">
+        <div style="position:relative">
+          <div>
+            <img [src]="getImage(item.denom)">
+          </div>
+          <div style="position:absolute;left:45px;top:20px;width:30px;height:30px;line-height:30px;background-color: #fbc02d;border-radius: 15px;color:darkslategray;text-align: center;font-weight: bolder;">
+            x{{item.numBills}}
+          </div>  
+        </div>
+      </div>    
+    </div>
+  </div>
+  </div>
+  
+  <div *ngIf="!allOk">
+    Error with distribution
+  </div>

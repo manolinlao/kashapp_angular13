@@ -1,0 +1,33 @@
+<app-nav-bar [showHeaderData]="true"></app-nav-bar>
+
+<ion-content>
+
+  
+  <div *ngIf="!waiting">    
+    <div style="display:flex;flex-direction: column;justify-content: center;">
+      <div style="text-align: center;font-size: large;font-weight:bold;margin-top:40px">
+        {{'entrance.available' | translate}}
+      </div>
+      <div style="text-align: center;margin-top:20px">
+        <app-atm-map [atms]="atms" (selectAtm)="selectAtm($event)"></app-atm-map>
+      </div>
+      <div style="display:flex;justify-content: center">
+        <div style="margin-top:20px;margin-bottom:20px;width:80vw;justify-content: center;text-align: center;">
+          <p-fieldset legend="{{'entrance.users' | translate}}" [toggleable]="true" [collapsed]="true" styleClass="myFieldset">        
+            <app-user-info [clients]="clients" [devices]="devices"></app-user-info>
+          </p-fieldset>
+        </div>      
+      </div>
+      
+    </div>
+  </div>
+
+
+</ion-content>
+
+<app-language></app-language>
+
+<app-footer></app-footer>
+
+
+

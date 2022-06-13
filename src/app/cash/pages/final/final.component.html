@@ -1,0 +1,95 @@
+<app-nav-bar [showHeaderData]="true" [showHome]="true" [showLogout]="true"></app-nav-bar>
+<app-steps [indexStep]="3" class="mt-2 mb-2"></app-steps>
+
+<ion-content>
+  <div class="cash-title">
+    {{'final.title' | translate}}
+  </div>
+ 
+  <div *ngIf="loading else dataLoaded" style="display:flex;justify-content:center;margin-top:50px">
+    <app-loader txtWait="{{'common.wait' | translate}}"></app-loader>
+  </div>
+  
+  <ng-template #dataLoaded>
+    <div *ngIf="code==='bills_taken'">
+      <ng-container *ngTemplateOutlet="templateBillsTaken"></ng-container>
+    </div>
+    <div *ngIf="code==='retract'">
+      <ng-container *ngTemplateOutlet="templateRetract"></ng-container>
+    </div>
+    <div *ngIf="code==='present_nok'">
+      <ng-container *ngTemplateOutlet="templatePresentNok"></ng-container>
+    </div>
+  
+    <div style="display:flex;justify-content:center;margin-bottom:20px;">      
+        <ion-button (click)="continue()"   shape="round" color="warning" size="small">
+          {{'final.morecash' | translate}}
+        </ion-button>              
+    </div>
+  </ng-template>
+
+  
+<ng-template #templatePresentNok>
+  <div style="display:flex;justify-content:center;margin-top:30px;margin-bottom:20px">
+    <p-card header="{{'final.error' | translate}}" [style]="{'width': '250px'}">
+      {{'final.errorDispense' | translate}}
+    </p-card>
+  </div>  
+</ng-template>
+
+<ng-template #templateRetract>
+  <div style="display:flex;justify-content:center;margin-top:30px;margin-bottom:20px">
+    <p-card header="{{'final.error' | translate}}" [style]="{'width': '250px'}">
+      {{'final.moneyNotPresent' | translate}}
+    </p-card>
+  </div>  
+</ng-template>
+
+<ng-template #templateBillsTaken>
+  <div style="display:flex;justify-content:center;margin-bottom:30px">
+    <div style="display:flex;flex-direction:column">
+      <div style="display:flex;justify-content:center;margin-top:20px;background-color:var(--mop-title-bg-color);color:var(--mop-title-text-color); width:100vw;padding:10px;font-weight: bold;">
+        <div>
+          {{'final.ok' | translate}}
+        </div>
+      </div>
+  
+      <div style="display:flex;flex-direction:column;justify-content:center;background-color:var(--common-bg-color); width:100vw;padding:10px;font-weight: bold;font-size: small;">
+        <div style="text-align: center;">
+          {{getCashTakenLiteral()}}
+        </div> 
+      </div>  
+
+      <div style="display:flex;justify-content:center;">
+        <div style="margin-top:20px">
+          {{'final.resumen' | translate}}
+        </div>
+      </div>
+
+      <div style="display:flex;justify-content:center;">
+        <div style="margin-top:20px">
+          <div style="width:300px;border:1px solid var(--common-border-color);padding:10px;border-radius: 8px;">
+            <div style="display:flex;flex-direction: column;">
+              <div style="display:flex;justify-content:center;">
+                <div style="display:flex;flex-direction: column;">
+                  <div *ngFor="let curr of currenciesPresented" style="margin-top:7px">
+                    <app-bill-selected [denom]="toNumber(curr.denom)" [num]="curr.numBills"></app-bill-selected>
+                  </div>         
+                </div>
+              </div>             
+            </div>            
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+  
+  
+</ion-content>
+
+<app-language></app-language>
+
+<app-footer></app-footer>
+

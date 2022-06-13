@@ -1,0 +1,17 @@
+<p-table [value]="users" responsiveLayout="scroll" styleClass="myTable">
+  <ng-template pTemplate="header">
+      <tr style="font-size: small;">
+          <th>{{'entrance.user' | translate}}</th>
+          <th>{{'entrance.atm' | translate}}</th>
+          <th>{{'entrance.mode' | translate}}</th>          
+      </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-user>
+      <tr [style]="getStyle(user.mode)">
+          <td>{{user.name}}</td>
+          <td>{{user.atm}}</td>
+          <td>{{user.modeDescription}}</td>          
+      </tr>
+  </ng-template>
+</p-table>
+

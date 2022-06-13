@@ -1,0 +1,12 @@
+.option{
+  width:325px;
+  border:1px solid var(--common-border-color);
+  border-radius: 8px;
+  padding-bottom: 10px;
+  cursor:pointer;
+}
+
+.option:hover{
+  border:1px solid var(--common-text-primary-color);
+  border-radius: 8px;
+}

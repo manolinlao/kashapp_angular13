@@ -1,0 +1,21 @@
+<ion-header mode="ios" class="ion-no-border">
+  <ion-toolbar color="primary">
+    <div style="display:flex;font-weight:bold;margin-left:10px">
+      <div *ngIf="showHome" style="cursor:pointer" (click)="goHome()">
+        <ion-icon slot="start" name="home-sharp" color="secondary"></ion-icon>
+      </div>      
+      <div style="margin-left:10px">
+        CashApp
+      </div>      
+    </div>
+    <ion-img slot="end" src="/assets/img/logo_fuji.svg" style="height: 40px;padding:0px"></ion-img>        
+  </ion-toolbar>   
+  <div *ngIf="showHeaderData" style="display:flex;background-color:rgb(214, 245, 255);font-size:small;padding:2px;justify-content: right;">
+    <div style="color:black">
+      <ion-icon name="person-outline"></ion-icon> {{userName}}
+    </div>
+    <div *ngIf="showLogout" style="margin-left:10px;margin-right:10px;color:var(--common-text-primary-color)" (click)="logout()">
+      <ion-icon name="log-out-outline"></ion-icon> logout
+    </div>
+  </div>
+</ion-header>

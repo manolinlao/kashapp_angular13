@@ -1,0 +1,47 @@
+<app-nav-bar [showHeaderData]="true" [showHome]="false" [showLogout]="false"></app-nav-bar>
+<app-steps [indexStep]="1" class="mt-2 mb-2"></app-steps>
+
+<ion-content>
+  <div style="display:flex;justify-content:center">
+    <div style="display:flex;flex-direction:column">
+
+      <div class="cash-title">
+        {{'prepare.title' | translate}}
+      </div>
+      <div style="display:flex;justify-content:center;background-color:var(--common-bg-color); width:100vw;padding:6px;font-weight: bold;font-size: small;">
+        <div style="color:grey">
+          {{'prepare.amountToDispense' | translate}}
+        </div>
+        <div style="margin-left:10px;color:var(--common-text-primary-color) ">
+          {{amount}} €
+        </div>
+      </div>
+
+  
+      <div style="display:flex;justify-content:center" class="mt-3 mb-5">
+        <div style="width:300px;border:1px solid var(--common-border-color);padding:10px;border-radius: 8px;">
+          <div *ngIf="useDenoms" class="flex-column">
+            <div style="display:flex;justify-content:center">
+              <div style="display:flex;flex-direction:column">
+                <div *ngFor="let denom of validDenoms" style="margin-top:7px">
+                  <app-bill-selected [denom]="denom.id" [num]="denom.selected"></app-bill-selected>
+                </div>         
+              </div>
+            </div>
+            <p-divider></p-divider>
+          </div>
+          <div>
+            <app-loader [txtLoading]="preparingText | translate" ></app-loader>
+          </div>  
+        </div>
+      </div>
+          
+    </div>
+  </div>
+  
+</ion-content>
+
+<app-language></app-language>
+
+<app-footer></app-footer>
+

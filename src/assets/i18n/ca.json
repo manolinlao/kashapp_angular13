@@ -1,0 +1,89 @@
+{
+  "common":{
+    "wait": "Si us plau, espera...",
+    "bills": "Bitllets",
+    "clear": "Esborrar",
+    "continue": "Continuar",
+    "back": "Enrere",
+    "loading":"carregant",
+    "logout": "logout",
+    "import": "Import",
+    "currency": "Moneda",
+    "value": "Valor",
+    "cashbox": "Caixetí",
+    "number": "Nombre",
+    "atmNotAvailable":"Aquest caixer no està disponible"
+  },
+  "login":{
+    "title": "Login d'usuari",
+    "username": "Usuari",
+    "password": "Password",
+    "clear": "Esborrar",
+    "login": "LOGIN",
+    "validating":"Validant usuari",
+    "userNotValid":"L'usuari no és vàlid"
+  },
+  "entrance":{
+    "loading":"Carregant mapa de caixers",
+    "available":"Caixers disponibles",
+    "user":"Usuari",
+    "atm":"Atm",
+    "mode":"Mode",
+    "users":"Usuaris",
+    "client":"Client",
+    "operator":"Operador",
+    "observer":"Observador",
+    "notAvailable":"No disponible",
+    "takeCash":"Treure diners",
+    "maintenance":"Maintenance",
+    "status":"Status"
+  },
+  "loadDenoms":{
+    "loadingBillsDenomination":"Carregant denominacions"
+  },
+  "cashStep":{
+    "amount":"Quantitat",
+    "prepare":"Preparació",
+    "card":"Targeta",
+    "cash":"Diners"
+  },
+  "selectImport":{
+    "title":"Introdueix una quantitat",
+    "selectAmount":"Selecciona una quantitat",
+    "multiple5":"La quantitat ha de ser múltiple de 5"
+  },
+  "optionsBills":{
+    "computing": "Calculant les possibilitats",
+    "title": "Tria l'opció que més t'agrada",
+    "subTitle": "Quantitat total a retirar",
+    "noSelect": "Deixa la CashUnit decidir per mi",
+    "option": "Opció"
+  },
+  "prepare":{
+    "billsOf": "bitllets de",
+    "title": "Preparant la dispensació",
+    "amountToDispense": "Quantitat a retirar",
+    "preparing": "Preparant"
+  },
+  "card":{
+    "title": "Agafa la teva targeta",
+    "subTitle": "Si us plau, agafa la teva targeta abans de treure els diners"
+  },
+  "cash":{
+    "title": "Agafa els diners",
+    "subTitle1": "Aquest és el pas final",
+    "subTitle2": "Ara ja pots agafar els teus diners, gaudeix-ho!",
+    "cashComing": "Els diners estan venint"
+  },
+  "final":{
+    "morecash": "Treu més diners",
+    "moneyNotPresent": "Els diners s'han capturat per excedir el temps de recollida",
+    "error": "Error",
+    "ok": "Reintegrament realitzat amb èxit",
+    "resumen": "Resumen dels bitllets obtinguts",
+    "cashTaken": "Has obtingut",
+    "errorDispense":"Error en la dispensació",
+    "title":"Operativa finalitzada"
+    
+  }
+}

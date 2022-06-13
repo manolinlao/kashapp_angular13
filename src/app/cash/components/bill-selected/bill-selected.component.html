@@ -1,0 +1,20 @@
+<div style="display:flex;width:250px;border:1px solid;border-color:var(--common-border-color);padding:5px;border-radius: 8px;">
+  <div>
+
+    <div style="position:relative">
+      <div>
+        <img [src]="imgFile">
+      </div>
+      <div style="position:absolute;left:45px;top:20px;width:30px;height:30px;line-height:30px;background-color: #fbc02d;border-radius: 15px;color:darkslategray;text-align: center;font-weight: bolder;">
+        x{{num}}
+      </div>  
+    </div>
+
+  </div>
+
+  <div style="margin-left:20px">
+    {{num}} {{'prepare.billsOf' | translate}} {{denom}} €
+  </div>
+
+</div>
+

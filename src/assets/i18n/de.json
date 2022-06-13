@@ -1,0 +1,87 @@
+{  
+  "common":{
+  "wait": "Bitte einen Moment warten",
+  "bills": "Banknoten",
+  "clear": "Löschen",
+  "continue": "Weiter",
+  "back": "Zurück",
+  "logout": "logout",
+  "import": "Menge",
+  "currency": "Währung",
+  "value": "Wert",
+  "cashbox": "Kasse",
+  "number": "Anzahl",
+  "atmNotAvailable":"Dieser Geldautomat ist nicht verfügbar"
+  },
+  "login":{
+    "title": "Benutzer-Anmeldung",
+    "username": "Nutzername",
+    "password": "Passwort",
+    "clear": "Zurücksetzen",
+    "login": "ANMELDUNG",
+    "validating":"Benutzer validieren",
+    "userNotValid":"Benutzer ungültig"
+  },
+  "entrance":{
+    "loading":"Laden der ATM-Karte",
+    "available":"verfügbaren ATM",
+    "user":"Nutzer",
+    "atm":"Atm",
+    "mode":"Modus",
+    "users":"Benutzer",
+    "client":"Kunde",
+    "operator":"Operator",
+    "observer":"Zuschauer",
+    "notAvailable":"nicht verfügbar",
+    "takeCash":"Bargeld nehmen",
+    "maintenance":"Wartungstafel",
+    "status":"Status"
+  },
+  "loadDenoms":{
+    "loadingBillsDenomination":"Wird geladen"
+  },
+  "cashStep":{
+    "amount":"Menge",
+    "prepare":"Bereiten",
+    "card":"Karte",
+    "cash":"Geld"
+  },
+  "selectImport":{
+    "title":"Geben Sie den Betrag ein",
+    "selectAmount":"Wählen Sie einen Betrag aus",
+    "multiple5":"Der Betrag muss ein Vielfaches von 5 sein"
+  },
+  "optionsBills":{
+    "computing": "Berechnung der Chancen",
+    "title": "Wählen Sie die Option, die Sie bevorzugen",
+    "subTitle": "Gesamtbetrag abzuheben",
+    "noSelect": "lass die CashUnit für mich entscheiden",
+    "option": "Option"
+  },
+  "prepare":{
+    "billsOf": "Banknoten von",
+    "title": "Geldabhebung vorbereiten",
+    "amountToDispense": "Betrag abzuheben",
+    "preparing": "Vorbereiten"
+  },
+  "card":{
+    "title": "Entnehmen Sie Ihre Karte",
+    "subTitle": "Bitte, nehmen Sie Ihre Karte, bevor Sie das Geld bekommen"
+  },
+  "cash":{
+    "title": "Nehmen Sie Ihre Geld",
+    "subTitle1": "Der letzte Schritt",
+    "subTitle2": "Jetzt können Sie Ihr Geld bekommen, genießen Sie es!",
+    "cashComing": "Geld kommt"
+  },
+  "final":{
+    "morecash": "Mehr Bargeld nehmen",
+    "moneyNotPresent": "Das Geld wurde wegen Überschreitung der Inkassozeit eingezogen",
+    "error": "Error",
+    "ok": "Auszahlung erfolgreich",
+    "resumen": "Zusammenfassung des erhaltenen Geldes",
+    "cashTaken": "Bargeld abgehoben",
+    "errorDispense":"Es ist irgendein fehler aufgetreten",
+    "title":"Operativ abgeschlossen"
+  }
+}

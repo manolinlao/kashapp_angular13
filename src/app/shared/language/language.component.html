@@ -1,0 +1,11 @@
+<ion-fab vertical="bottom" horizontal="start" slot="fixed">
+  <ion-fab-button color="secondary" size="small">
+    <ion-icon style="color:white" name="globe-outline"></ion-icon>
+  </ion-fab-button>
+  <ion-fab-list side="top">
+    <ion-fab-button (click)="changeLang('es')"><img src="/assets/img/flag_es.jpg"></ion-fab-button>
+    <ion-fab-button (click)="changeLang('ca')"><img src="/assets/img/flag_ca.jpg"></ion-fab-button>
+    <ion-fab-button (click)="changeLang('en')"><img src="/assets/img/flag_en.jpg"></ion-fab-button>
+    <ion-fab-button (click)="changeLang('de')"><img src="/assets/img/flag_de.jpg"></ion-fab-button>
+  </ion-fab-list>
+</ion-fab>

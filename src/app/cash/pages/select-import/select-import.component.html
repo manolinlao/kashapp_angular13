@@ -1,0 +1,48 @@
+<app-nav-bar [showHeaderData]="true" [showHome]="true"></app-nav-bar>
+<app-steps [indexStep]="0" class="mt-2 mb-2"></app-steps>
+
+<ion-content>
+
+  <div class="cash-title">
+    {{'selectImport.title' | translate}}
+  </div>
+  
+
+  <div style="display: flex;justify-content: center;" class="mt-3">  
+      <div style="width:120px;border:1px solid var(--common-border-color);border-radius:16px;">
+        <div style="margin-left: 20px;">
+          <ion-input type="number" clearInput="true" [(ngModel)]="formValue"></ion-input>
+        </div>      
+      </div>          
+  </div>
+  <div style="display: flex;justify-content: center;" class="mt-1">  
+    <ion-button (click)="goForm()" fill="clear" shape="round" color="secondary">
+      {{'common.continue' | translate}} <ion-icon slot="end" name="arrow-forward-circle-outline"></ion-icon>       
+    </ion-button>    
+  </div>
+
+  
+
+  <div class="cash-title mt-3">
+    {{'selectImport.selectAmount' | translate}}
+  </div>
+
+  <div style="display:flex;justify-content: center;" class="mt-2">      
+    <div style="display:flex;flex-direction:column;border:1px solid var(--common-border-color);width:310px;border-radius: 8px;">
+      <div style="display:flex">
+        <app-button-cash amount="50" (onButtonClick)="goSelectedAmount($event)"></app-button-cash>
+        <app-button-cash amount="100" (onButtonClick)="goSelectedAmount($event)"></app-button-cash>
+        <app-button-cash amount="140" (onButtonClick)="goSelectedAmount($event)"></app-button-cash>        
+      </div>
+      <div style="display:flex">
+        <app-button-cash amount="200" (onButtonClick)="goSelectedAmount($event)"></app-button-cash>
+        <app-button-cash amount="250" (onButtonClick)="goSelectedAmount($event)"></app-button-cash>
+        <app-button-cash amount="300" (onButtonClick)="goSelectedAmount($event)"></app-button-cash>
+      </div>
+    </div>          
+  </div>
+</ion-content>
+
+<app-language></app-language>
+
+<app-footer></app-footer>

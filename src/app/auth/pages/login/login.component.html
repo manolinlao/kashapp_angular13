@@ -1,0 +1,42 @@
+<app-nav-bar></app-nav-bar>
+
+<ion-content class="ion-padding" *ngIf="showContent" mode="ios">
+
+  <form (ngSubmit)="login()" autocomplete="off" [formGroup]="myForm">
+    <ion-grid fixed > 
+      <ion-row>
+
+        <ion-col size="1"></ion-col>
+
+        <ion-col>
+          <ion-list mode="ios">
+            <ion-list-header>
+              <ion-label>{{'login.title' | translate}}</ion-label>      
+            </ion-list-header>
+            <ion-item>
+              <ion-label position="floating">{{'login.username' | translate}}</ion-label>
+              <ion-input formControlName="username"></ion-input>  
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">{{'login.password' | translate}}</ion-label>
+              <ion-input type="password" formControlName="currentPassword"></ion-input>                        
+            </ion-item>            
+            <ion-item lines="none">
+              <ion-button color="warning" style="text-transform:none;margin-top:30px" (click)="clear()">{{'login.clear' | translate}}</ion-button>
+              <ion-button color="primary" style="text-transform:none;margin-top:30px" type="submit">{{'login.login' | translate}}</ion-button>
+            </ion-item>       
+          </ion-list>
+        </ion-col>
+
+        <ion-col size="1"></ion-col>
+
+      </ion-row>
+    </ion-grid>
+  </form>  
+
+</ion-content>
+
+<app-language></app-language>
+
+<app-footer></app-footer>
+
