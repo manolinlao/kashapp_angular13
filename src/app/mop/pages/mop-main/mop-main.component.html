@@ -1,0 +1,26 @@
+<app-nav-bar [showHeaderData]="true" [showHome]="true"></app-nav-bar>
+<ion-content>
+  <div class="cash-title" style="margin-top:10px;margin-bottom: 10px;">
+    {{'mop.title' | translate}}
+  </div>
+  <p-carousel [value]="products" [numVisible]="3" [numScroll]="3" [circular]="true" [responsiveOptions]="responsiveOptions">
+    <ng-template let-product pTemplate="item">
+        <div [class]="getClassProduct(product.name)" (click)="optionClicked(product.navigate,product.name)">
+            <div>             
+                <div>
+                  <i [class]="product.icon" style="font-size:2rem"></i>
+                </div>
+                <div>
+                    <h4 class="mb-1" style="font-size: smaller;">{{product.name | translate}}</h4>                 
+                </div>
+            </div>
+        </div>
+    </ng-template>
+    </p-carousel>
+  <router-outlet></router-outlet>
+</ion-content>
+
+<app-language></app-language>
+
+<app-footer></app-footer>
+

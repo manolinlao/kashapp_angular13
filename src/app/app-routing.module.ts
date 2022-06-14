@@ -22,6 +22,12 @@ const routes: Routes = [
         loadChildren: () => import('./cash/cash.module').then((m) => m.CashModule),
     },
     {
+        path: 'mop',
+        loadChildren: () => import('./mop/mop.module').then((mod) => mod.MopModule),
+        canLoad: [AuthGuard],
+        canActivate: [AuthGuard],
+    },
+    {
         path: '**',
         redirectTo: 'intro',
     },

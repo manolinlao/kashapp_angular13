@@ -1,0 +1,9 @@
+.inputbill{
+  width:50px; 
+  border-radius: 4px;
+  border:1px solid lightgray;
+  cursor:pointer;
+  font-size: small;
+  color:gray;
+  padding-left:5px;
+}

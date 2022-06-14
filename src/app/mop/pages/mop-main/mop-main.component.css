@@ -1,0 +1,27 @@
+.product-item {
+  border: 2px solid var(--surface-d);
+   border-radius: 23px;
+   margin: .3rem;
+   text-align: center;
+   padding: 2rem 0;   
+   cursor: pointer;
+}   
+
+
+.product-item:hover{
+border: 2px solid var(--common-text-primary-color);;
+background-color: var(--common-bg-color);
+color:var(--common-text-primary-color);
+}
+
+.product-item-selected {
+border: 2px solid;
+border-color:var(--common-text-primary-color);
+background-color: var(--common-bg-color);
+color:var(--common-text-primary-color);
+border-radius: 23px;
+margin: .3rem;
+text-align: center;
+padding: 2rem 0;   
+cursor: pointer;
+}  

@@ -1,0 +1,52 @@
+
+
+<div class="cash-title" style="margin-top:10px;margin-bottom: 10px;">
+  {{'mop.setStorage.title' | translate}}
+</div>
+
+<div style="display:flex;justify-content:center;font-weight:bold;font-size: small;color:var(--common-text-primary-color);margin-bottom: 5px;text-align:center;">
+  <div>
+    {{'mop.setStorage.subTitle' | translate}}
+  </div> 
+</div>
+
+<div *ngIf="loading" style="display:flex;justify-content:center;margin-top:5px">
+  <app-loader txtLoading="" [txtWait]="waitText | translate"></app-loader>
+</div>
+
+
+<form *ngIf="!loading" autocomplete="off" [formGroup]="myForm" (ngSubmit)="setStorage()">  
+  <div style="display:flex;justify-content:center;margin-top:10px;font-size: small;">
+    <div style="display:flex;flex-direction:column;border:1px solid;border-color:var(--common-border-color);border-radius: 8px;width:350px;padding:10px">
+
+      <div style="display:flex;justify-content:center;font-weight:bold">
+        <span style="width:40px">Id</span>
+        <span style="width:50px">Name</span>
+        <span style="width:105px">Denom</span>
+        <span style="width:50px">Bills</span>
+        <span style="width:50px">New</span>
+      </div>
+
+      <hr/>
+
+      <div *ngFor="let cashbox of cashboxArray;let ind=index" style="display:flex;justify-content:center;margin-top:10px">
+        <span style="width:40px;display: inline-flex;align-items: center;">{{cashbox.id}}</span>
+        <span style="width:50px;display: inline-flex;align-items: center;">{{getCashboxName(cashbox)}}</span> 
+        <span style="width:105px;display: inline-flex;align-items: center;"><p-dropdown [options]="possibleDenoms" [formControlName]=getFormControlNameDenom(ind) optionLabel="name" styleClass="myDropDown"></p-dropdown></span>
+        <span style="width:50px;display: inline-flex;align-items: center;margin-left:4px">{{getActualBills(cashbox)}}</span>          
+        <input style="width:50px;display: inline-flex;align-items: center;" type="number" [formControlName]="getFormControlNameNumbills(ind)" class="inputbill" min="0" step="1">      
+      </div>
+
+    </div>
+  </div>
+
+ 
+  <div style="display:flex;justify-content:center;margin-top:30px;margin-bottom:30px;">
+    <ion-button type="submit"  shape="round">
+      {{'mop.setStorage.set' | translate}}
+    </ion-button>    
+  </div>
+</form>
+
+
+
