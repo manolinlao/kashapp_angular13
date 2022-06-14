@@ -83,5 +83,31 @@
     "cashTaken": "Bargeld abgehoben",
     "errorDispense":"Es ist irgendein fehler aufgetreten",
     "title":"Operativ abgeschlossen"
+  },
+  "mop":{
+    "title": "Wartungstafel",
+    "menu":{
+      "status": "Status",
+      "setStorage": "Set Storage",
+      "language": "Sprache",
+      "lights": "Leuchte",
+      "user": "Benützer",
+      "loading": "wird geladen",
+      "config": "Einstellungen"
+    },    
+    "setStorage":{
+      "title": "Set Storage",
+      "subTitle": "Wählen Sie die Stückelung und die Anzahl der Banknoten",
+      "num": "Num",
+      "set": "Set"
+    },
+    "language":{
+      "title": "Sprache ändern",
+      "subTitle": "Wâhlen Sie die Sprache aus, die Sie verwenden möchten"
+    },
+    "status":{
+      "title": "Status",
+      "subTitle": "Gerätestatus"
+    }
   }
 }

@@ -85,5 +85,31 @@
     "errorDispense":"Error en la dispensació",
     "title":"Operativa finalitzada"
     
+  },
+  "mop":{
+    "title": "Panel de Manteniment",
+    "menu":{
+      "status": "Estat",
+      "setStorage": "Set Storage",
+      "language": "Idioma",
+      "lights": "Llums",
+      "user": "Usuari",
+      "loading":"Carregant",
+      "config":"Configuració"
+    },
+    "setStorage":{
+      "title": "Set Storage",
+      "subTitle": "Selecciona les denominacions i el número de bitllets",
+      "num": "Núm",
+      "set": "Set"
+    },
+    "language":{
+      "title": "Canviar idioma",
+      "subTitle": "Selecciona l'idioma que vols fer servir"
+    },
+    "status":{
+      "title": "Estat",
+      "subTitle": "Estat dels dispositius"
+    }
   }
 }

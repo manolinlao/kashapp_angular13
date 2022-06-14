@@ -84,5 +84,30 @@
     "cashTaken": "Cash withdrawed",
     "errorDispense":"Dispense Error",
     "title":"Operation completed"
+  },
+  "mop":{
+    "title": "Maintenance Panel",
+    "menu":{
+      "status": "Status",
+      "setStorage": "Set Storage",
+      "language": "Language",
+      "lights": "Lights",
+      "user": "User",
+      "config":"Configuration"
+    },
+    "setStorage":{
+      "title": "Set Storage",
+      "subTitle": "Select the cashbox denominations and the number of bills",
+      "num": "Num",
+      "set": "Set"
+    },
+    "language":{
+      "title": "Change language",
+      "subTitle": "Select which language you want to use"
+    },
+    "status":{
+      "title": "Status",
+      "subTitle": "Device Status"
+    }
   }
 }

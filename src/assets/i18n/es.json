@@ -82,7 +82,32 @@
     "resumen": "Resumen de los billetes obtenidos",
     "cashTaken": "Has sacado",
     "errorDispense":"Error en la dispensación",
-    "title":"Operativa finalizada"
-    
+    "title":"Operativa finalizada" 
+  },
+  "mop":{
+    "title": "Panel de Mantenimiento",
+    "menu":{
+      "status": "Estado",
+      "setStorage": "Set Storage",
+      "language": "Idioma",
+      "lights": "Luces",
+      "user": "Usuario",
+      "loading": "loading",
+      "config":"Configuración"
+    },
+    "setStorage":{
+      "title": "Set Storage",
+      "subTitle": "Selecciona las denominaciones y el número de billetes",
+      "num": "Núm",
+      "set": "Set"
+    },
+    "language":{
+      "title": "Idioma",
+      "subTitle": "Selecciona qué idioma quiere usar"
+    },
+    "status":{
+      "title": "Estado",
+      "subTitle": "Estado de los dispositivos"
+    }
   }
 }
