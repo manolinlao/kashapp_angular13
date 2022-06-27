@@ -34,6 +34,7 @@
     "@ngx-translate/core": "^13.0.0",
     "@ngx-translate/http-loader": "^6.0.0",
     "@schematics/angular": "^14.0.3",
+    "angular-disable-browser-back-button": "^1.0.2",
     "cordova-android": "10.1.2",
     "fujitsu-mdcs-iot-devices": "file:../fujitsu-mdcs-iot-devices",
     "fujitsu-xfs4iot-api": "file:../fujitsu-xfs4iot-api",

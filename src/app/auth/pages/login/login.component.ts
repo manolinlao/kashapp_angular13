@@ -27,6 +27,7 @@ export class LoginComponent implements OnInit, OnDestroy {
 
     @HostListener('window:popstate', ['$event'])
     onPopState(event: any) {
+        console.log('onpopstate');
         history.pushState(null, '');
     }
 
