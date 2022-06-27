@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-inferrable-types */
-import {Component, OnInit, OnDestroy} from '@angular/core';
+import {Component, OnInit, OnDestroy, HostListener} from '@angular/core';
 import {SignalingService} from '../../../services/signaling.service';
 import {NavController} from '@ionic/angular';
 import {TraceService} from '../../../services/trace.service';
@@ -19,6 +19,11 @@ export class MoneyComponent implements OnInit, OnDestroy {
     loadingText: string = 'cash.cashComing';
     waitText: string = 'common.wait';
     subTitle: string = 'cash.subTitle1';
+
+    @HostListener('window:popstate', ['$event'])
+    onPopState(event: any) {
+        history.pushState(null, '');
+    }
 
     constructor(
         private signaling: SignalingService,

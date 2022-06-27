@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import {Component, OnInit} from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {UserService} from '../../../services/user.service';
 import {TraceService} from '../../../services/trace.service';
@@ -85,6 +85,11 @@ export class MopMainComponent implements OnInit {
         },
     ];
     nameProductSelected: string = 'mop.menu.status';
+
+    @HostListener('window:popstate', ['$event'])
+    onPopState(event: any) {
+        history.pushState(null, '');
+    }
 
     constructor(private navController: NavController, private userService: UserService, private trace: TraceService) {}
 

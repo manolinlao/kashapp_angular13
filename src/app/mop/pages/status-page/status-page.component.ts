@@ -36,6 +36,11 @@ export class StatusPageComponent implements OnInit, OnDestroy {
         }
     }
 
+    @HostListener('window:popstate', ['$event'])
+    onPopState(event: any) {
+        history.pushState(null, '');
+    }
+
     constructor(
         private signalingService: SignalingService,
         private messageService: MessageService,

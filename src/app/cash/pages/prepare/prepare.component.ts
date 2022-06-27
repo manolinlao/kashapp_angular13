@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/prefer-for-of */
 /* eslint-disable @typescript-eslint/no-inferrable-types */
-import {Component, OnInit, OnDestroy} from '@angular/core';
+import {Component, OnInit, OnDestroy, HostListener} from '@angular/core';
 
 import {
     DimCashDispenserPrepareDispenseAmount,
@@ -33,6 +33,11 @@ export class PrepareComponent implements OnInit, OnDestroy {
     signalingSubscriptor!: Subscription;
 
     simulate: boolean = false;
+
+    @HostListener('window:popstate', ['$event'])
+    onPopState(event: any) {
+        history.pushState(null, '');
+    }
 
     constructor(
         private dataAppService: DataAppService,

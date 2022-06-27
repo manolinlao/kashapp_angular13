@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-inferrable-types */
-import {Component, OnInit, OnDestroy} from '@angular/core';
+import {Component, OnInit, OnDestroy, HostListener} from '@angular/core';
 import {Subscription} from 'rxjs';
 import {CurrencyPresented, DataAppService} from '../../services/data-app.service';
 import {TraceService} from '../../../services/trace.service';
@@ -22,6 +22,11 @@ export class FinalComponent implements OnInit, OnDestroy {
 
     routeParametersSubscription!: Subscription;
     myTimeout!: ReturnType<typeof setTimeout>;
+
+    @HostListener('window:popstate', ['$event'])
+    onPopState(event: any) {
+        history.pushState(null, '');
+    }
 
     constructor(
         private trace: TraceService,

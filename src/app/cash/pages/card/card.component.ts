@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import {NavController} from '@ionic/angular';
 
 @Component({
@@ -7,6 +7,10 @@ import {NavController} from '@ionic/angular';
     styleUrls: ['./card.component.scss'],
 })
 export class CardComponent implements OnInit {
+    @HostListener('window:popstate', ['$event'])
+    onPopState(event: any) {
+        history.pushState(null, '');
+    }
     constructor(private navController: NavController) {}
 
     ngOnInit() {

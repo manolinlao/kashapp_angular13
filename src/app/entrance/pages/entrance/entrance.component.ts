@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/member-ordering */
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 /* eslint-disable @typescript-eslint/no-inferrable-types */
-import {Component, OnInit, OnDestroy} from '@angular/core';
+import {Component, OnInit, OnDestroy, HostListener} from '@angular/core';
 import {TraceService} from '../../../services/trace.service';
 import {SignalingService} from '../../../services/signaling.service';
 import {UserService} from '../../../services/user.service';
@@ -35,6 +35,11 @@ export class EntranceComponent implements OnInit, OnDestroy {
     private subscriptionLogin!: Subscription;
 
     loading: HTMLIonLoadingElement;
+
+    @HostListener('window:popstate', ['$event'])
+    onPopState(event: any) {
+        history.pushState(null, '');
+    }
 
     constructor(
         private trace: TraceService,

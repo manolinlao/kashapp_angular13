@@ -3,7 +3,7 @@
 /* eslint-disable no-eval */
 /* eslint-disable no-magic-numbers */
 /* eslint-disable no-console */
-import {Component, OnInit, OnDestroy, ViewChild, ElementRef} from '@angular/core';
+import {Component, OnInit, OnDestroy, ViewChild, ElementRef, HostListener} from '@angular/core';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import {DimCashDispenserGetBoxes, DimCashDispenserModifyStorageItems} from 'fujitsu-mdcs-iot-devices';
 import {Subscription} from 'rxjs';
@@ -61,6 +61,11 @@ export class SetStoragePageComponent implements OnInit, OnDestroy {
         numBills9: [0],
         numBills10: [0],
     });
+
+    @HostListener('window:popstate', ['$event'])
+    onPopState(event: any) {
+        history.pushState(null, '');
+    }
 
     constructor(
         private signaling: SignalingService,

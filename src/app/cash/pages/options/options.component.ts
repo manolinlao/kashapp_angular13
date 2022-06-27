@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/prefer-for-of */
 /* eslint-disable @typescript-eslint/no-inferrable-types */
-import {Component, OnInit, OnDestroy} from '@angular/core';
+import {Component, OnInit, OnDestroy, HostListener} from '@angular/core';
 import {LoadingController, AlertController, NavController} from '@ionic/angular';
 import {TraceService} from '../../../services/trace.service';
 import {TranslateService} from '@ngx-translate/core';
@@ -24,6 +24,11 @@ export class OptionsComponent implements OnInit, OnDestroy {
     amount: number = 0;
     billsDistribution!: BillsDistribution[];
     numberOptionNoSelect: string = '0';
+
+    @HostListener('window:popstate', ['$event'])
+    onPopState(event: any) {
+        history.pushState(null, '');
+    }
 
     constructor(
         private loadingController: LoadingController,
